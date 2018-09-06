@@ -30,7 +30,8 @@
     </div>
 </body>
 <script src="./jQuery.js"></script>
-<script src="http://open.mobile.qq.com/sdk/qqapi.js"></script>
+<!-- <script src="http://open.mobile.qq.com/sdk/qqapi.js"></script> -->
+<script src="https://a.alipayobjects.com/g/h5-lib/alipayjsapi/3.0.6/alipayjsapi.inc.min.js"></script>
 <script>
 $(function(){
     $('.main').on('click',function(){
@@ -40,8 +41,10 @@ $(function(){
             image_url: 'http://123.56.12.44/testimg.png',
             share_url: 'http://123.56.12.44'
         };
-        location.replace('https://service.weibo.com/share/share.php?url=' + encodeURIComponent(share.share_url) + '&title=' + share.title + '&appkey=277159429&&ralateUid=1855112015&pic=' + share.image_url + '&searchPic=true');
-
+        // location.replace('https://service.weibo.com/share/share.php?url=' + encodeURIComponent(share.share_url) + '&title=' + share.title + '&appkey=277159429&&ralateUid=1855112015&pic=' + share.image_url + '&searchPic=true');
+        ap.share(share, function() {
+            alert('??');
+        });
     })
 })
 </script>
