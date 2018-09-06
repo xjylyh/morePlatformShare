@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>share</title>
+    <style>
+        *{margin:0;padding: 0;}
+        body,html{
+            width:100%;
+            height:100%;
+        }
+        .main{
+            width:100%;
+            height:100%;
+            background:#00ffaa;
+            text-align: center;
+        }
+        .main>img{
+            width:350px;
+            height:350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="./testimg.png" alt="">
+        分享！！！！
+    </div>
+</body>
+<script src="./jQuery.js"></script>
+<script src="http://open.mobile.qq.com/sdk/qqapi.js"></script>
+<script>
+$(function(){
+    $('.main').on('click',function(){
+        const share = {
+            title: $('title').val(),
+            desc: '分享内容，最大60字节',
+            image_url: './testimg.png',
+            share_url: 'http://www.baidu.com'
+        };
+        console.log(share);
+        mqq.invoke("data","setShareInfo", share);
+        mqq.ui.showShareMenu();
+    })
+})
+</script>
+</html>
