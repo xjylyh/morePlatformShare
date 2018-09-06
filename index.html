@@ -35,14 +35,13 @@
 $(function(){
     $('.main').on('click',function(){
         const share = {
-            title: $('title').val(),
+            title: $('title').html(),
             desc: '分享内容，最大60字节',
-            image_url: './testimg.png',
-            share_url: 'http://www.baidu.com'
+            image_url: 'http://123.56.12.44/testimg.png',
+            share_url: 'http://123.56.12.44'
         };
-        console.log(share);
-        mqq.invoke("data","setShareInfo", share);
-        mqq.ui.showShareMenu();
+        location.replace('https://service.weibo.com/share/share.php?url=' + encodeURIComponent(share.share_url) + '&title=' + share.title + '&appkey=277159429&&ralateUid=1855112015&pic=' + share.image_url + '&searchPic=true');
+
     })
 })
 </script>
