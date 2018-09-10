@@ -55,8 +55,8 @@
         h5ShareToNative.setShareData(shareData)
 
         function call(command) {
-            console.log('init');
             try {
+                console.log('init');
                 h5ShareToNative.call(command)
             } catch (err) {
                 // 如果不支持，你可以在这里做降级处理
