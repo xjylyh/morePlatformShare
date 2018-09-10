@@ -5,6 +5,7 @@ export default class Wechat extends Share {
     constructor(config) {
         super(config)
         this.setConfig(config)
+        console.log('wechartConfig: '+config)
     }
 
     call(command, options) {

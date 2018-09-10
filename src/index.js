@@ -58,7 +58,7 @@ if (isWechat) {
 } else {
     h5ShareToNative = Others
 }
-
+console.log(isIos,isWechat,'istests');
 export {
     Share,
     QQMobileBrowser,
