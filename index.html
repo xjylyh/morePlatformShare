@@ -31,7 +31,7 @@
         <button onclick="call('qqFriend')">QQ</button>
         <button onclick="call('qZone')">QQ空间</button>
         <button onclick="call('weibo')">微博</button>
-        <button onclick="setTitle('fa-ge NativeShare')">设置标题</button>
+        <button onclick="setTitle('h5ShareToNative')">设置标题</button>
     </div>
 </body>
 <script src="./jQuery.js"></script>
@@ -61,6 +61,11 @@
                 // 如果不支持，你可以在这里做降级处理
                 alert(err.message+11111);
             }
+        }
+        function setTitle(title) {
+            nativeShare.setShareData({
+                title: title,
+            })
         }
 </script>
 </html>
