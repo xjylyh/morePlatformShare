@@ -25,12 +25,13 @@
 </head>
 <body>
     <div class="main">
-        <button>通用分享</button>
-        <button>分享到微信好友</button>
-        <button>分享到朋友圈</button>
-        <button>分享到qq</button>
-        <button onclick="call('qZone')">分享到qq空间</button>
-        <button>分享到微博</button>
+        <button onclick="call()">通用分享</button>
+        <button onclick="call('wechatFriend')">微信好友</button>
+        <button onclick="call('wechatTimeline')">朋友圈</button>
+        <button onclick="call('qqFriend')">QQ</button>
+        <button onclick="call('qZone')">QQ空间</button>
+        <button onclick="call('weibo')">微博</button>
+        <button onclick="setTitle('fa-ge NativeShare')">设置标题</button>
     </div>
 </body>
 <script src="./jQuery.js"></script>
