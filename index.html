@@ -55,8 +55,6 @@
 
         function call(command) {
             try {
-                console.log('init');
-                console.log(h5ShareToNative);
                 h5ShareToNative.call(command);
             } catch (err) {
                 // 如果不支持，你可以在这里做降级处理
