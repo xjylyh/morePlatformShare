@@ -55,6 +55,7 @@
         h5ShareToNative.setShareData(shareData)
 
         function call(command) {
+            console.log('init');
             try {
                 h5ShareToNative.call(command)
             } catch (err) {

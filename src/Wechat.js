@@ -8,7 +8,8 @@ export default class Wechat extends Share {
     }
 
     call(command, options) {
-        this.setShareData(options)
+        this.setShareData(options);
+        console.log('now in wechat');
     }
 
     setConfig(config) {
