@@ -23,9 +23,6 @@ module.exports = {
             }
         ]
     },
-    plugins:[
-        new webpack.optimize.ModuleConcatenationPlugin()
-    ],
     //压缩js
     optimization: {
         minimizer: [

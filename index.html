@@ -34,13 +34,12 @@
         <button onclick="setTitle('h5ShareToNative')">设置标题</button>
     </div>
 </body>
-<script src="./jQuery.js"></script>
 <script type="text/javascript" src="../h5ShareToNative.js"></script>
 <script>
         var h5ShareToNative = new h5ShareToNative();
         var shareData = {
             title: 'h5ShareToNative',
-            desc: 'h5ShareToNative是模仿ds',
+            desc: 'h5ShareToNative是一个h5分享插件',
             // 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
             link: 'https://github.com/xjylyh',
             icon: 'https://t11.baidu.com/it/u=1582047319,4217339679&fm=76',
@@ -61,7 +60,7 @@
                 h5ShareToNative.call(command);
             } catch (err) {
                 // 如果不支持，你可以在这里做降级处理
-                alert(err.message+11111);
+                alert(err.message);
             }
         }
         function setTitle(title) {
